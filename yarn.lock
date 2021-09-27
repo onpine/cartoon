@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@ahooksjs/use-request@^2.8.12":
+  version "2.8.12"
+  resolved "http://172.18.1.159:4873/@ahooksjs%2fuse-request/-/use-request-2.8.12.tgz#5234d5d7823d7759e87bd86f6ddbe40368090903"
+  integrity sha1-UjTV14I9d1noe9hvbdvkA2gJCQM=
+  dependencies:
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
+
 "@babel/code-frame@^7.14.5":
   version "7.14.5"
   resolved "http://172.18.1.159:4873/@babel%2fcode-frame/-/code-frame-7.14.5.tgz#23b08d740e83f49c5e59945fbf1b43e80bbf4edb"
@@ -220,7 +228,7 @@
     "@babel/plugin-syntax-jsx" "^7.14.5"
     "@babel/types" "^7.14.9"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.15.4"
   resolved "http://172.18.1.159:4873/@babel%2fruntime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
@@ -259,6 +267,51 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@react-spring/animated@~9.2.0":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2fanimated/-/animated-9.2.4.tgz#062ecc0fdfef89f2541a42d8500428b70035f879"
+  integrity sha1-Bi7MD9/vifJUGkLYUAQotwA1+Hk=
+  dependencies:
+    "@react-spring/shared" "~9.2.0"
+    "@react-spring/types" "~9.2.0"
+
+"@react-spring/core@~9.2.0":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2fcore/-/core-9.2.4.tgz#275a4a065e3a315a4f5fb28c9a6f62ce718c25d6"
+  integrity sha1-J1pKBl46MVpPX7KMmm9iznGMJdY=
+  dependencies:
+    "@react-spring/animated" "~9.2.0"
+    "@react-spring/shared" "~9.2.0"
+    "@react-spring/types" "~9.2.0"
+
+"@react-spring/rafz@~9.2.0":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2frafz/-/rafz-9.2.4.tgz#44793e9adc14dd0dcd1573d094368af11a89d73a"
+  integrity sha1-RHk+mtwU3Q3NFXPQlDaK8RqJ1zo=
+
+"@react-spring/shared@~9.2.0":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2fshared/-/shared-9.2.4.tgz#f9cc66ac5308a77293330a18518e34121f4008c1"
+  integrity sha1-+cxmrFMIp3KTMwoYUY40Eh9ACME=
+  dependencies:
+    "@react-spring/rafz" "~9.2.0"
+    "@react-spring/types" "~9.2.0"
+
+"@react-spring/types@~9.2.0":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2ftypes/-/types-9.2.4.tgz#2365ce9d761f548a9adcb2cd68714bf26765a5de"
+  integrity sha1-I2XOnXYfVIqa3LLNaHFL8mdlpd4=
+
+"@react-spring/web@^9.2.4":
+  version "9.2.4"
+  resolved "http://172.18.1.159:4873/@react-spring%2fweb/-/web-9.2.4.tgz#c6d5464a954bfd0d7bc90117050f796a95ebfa08"
+  integrity sha1-xtVGSpVL/Q17yQEXBQ95apXr+gg=
+  dependencies:
+    "@react-spring/animated" "~9.2.0"
+    "@react-spring/core" "~9.2.0"
+    "@react-spring/shared" "~9.2.0"
+    "@react-spring/types" "~9.2.0"
+
 "@rollup/pluginutils@^4.1.1":
   version "4.1.1"
   resolved "http://172.18.1.159:4873/@rollup%2fpluginutils/-/pluginutils-4.1.1.tgz#1d4da86dd4eded15656a57d933fda2b9a08d47ec"
@@ -266,6 +319,11 @@
   dependencies:
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
+
+"@types/js-cookie@^2.2.6":
+  version "2.2.7"
+  resolved "http://172.18.1.159:4873/@types%2fjs-cookie/-/js-cookie-2.2.7.tgz#226a9e31680835a6188e887f3988e60c04d3f6a3"
+  integrity sha1-ImqeMWgINaYYjoh/OYjmDATT9qM=
 
 "@vitejs/plugin-react@^1.0.0":
   version "1.0.1"
@@ -281,12 +339,21 @@
     react-refresh "^0.10.0"
     resolve "^1.20.0"
 
-add-dom-event-listener@^1.1.0:
-  version "1.1.0"
-  resolved "http://172.18.1.159:4873/add-dom-event-listener/-/add-dom-event-listener-1.1.0.tgz#6a92db3a0dd0abc254e095c0f1dc14acbbaae310"
-  integrity sha1-apLbOg3Qq8JU4JXA8dwUrLuq4xA=
+ahooks@^2.10.11:
+  version "2.10.11"
+  resolved "http://172.18.1.159:4873/ahooks/-/ahooks-2.10.11.tgz#167fb30909a63cdc3361e80fad5329fc498461fd"
+  integrity sha1-Fn+zCQmmPNwzYegPrVMp/EmEYf0=
   dependencies:
-    object-assign "4.x"
+    "@ahooksjs/use-request" "^2.8.12"
+    "@types/js-cookie" "^2.2.6"
+    dayjs "^1.9.1"
+    intersection-observer "^0.7.0"
+    js-cookie "^2.2.1"
+    lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
+    lodash.throttle "^4.1.1"
+    resize-observer-polyfill "^1.5.1"
+    screenfull "^5.0.0"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -295,52 +362,40 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd-mobile@^2.3.4:
-  version "2.3.4"
-  resolved "http://172.18.1.159:4873/antd-mobile/-/antd-mobile-2.3.4.tgz#8f584707b30343d102f3ca10fdaf677e2a5d1cc8"
-  integrity sha1-j1hHB7MDQ9EC88oQ/a9nfipdHMg=
+antd-mobile-icons@^0.2.2:
+  version "0.2.2"
+  resolved "http://172.18.1.159:4873/antd-mobile-icons/-/antd-mobile-icons-0.2.2.tgz#0e084d3ea5c642f60ab46e7ed3db74ad3dbacd52"
+  integrity sha1-DghNPqXGQvYKtG5+09t0rT26zVI=
+
+antd-mobile-v5-count@^1.0.1:
+  version "1.0.1"
+  resolved "http://172.18.1.159:4873/antd-mobile-v5-count/-/antd-mobile-v5-count-1.0.1.tgz#85f20c46d1635c24e856bcf5ad55e8c98e44a523"
+  integrity sha1-hfIMRtFjXCToVrz1rVXoyY5EpSM=
+
+antd-mobile@^5.0.0-beta.13:
+  version "5.0.0-beta.13"
+  resolved "http://172.18.1.159:4873/antd-mobile/-/antd-mobile-5.0.0-beta.13.tgz#b1171de90b0ac898a5ef814c1aed1a845cd80389"
+  integrity sha1-sRcd6QsKyJil74FMGu0ahFzYA4k=
   dependencies:
-    array-tree-filter "~2.1.0"
-    babel-runtime "6.x"
-    classnames "^2.2.1"
-    normalize.css "^7.0.0"
-    rc-checkbox "~2.0.0"
-    rc-collapse "~1.9.1"
-    rc-slider "~8.2.0"
-    rc-swipeout "~2.0.0"
-    rmc-calendar "^1.0.0"
-    rmc-cascader "~5.0.0"
-    rmc-date-picker "^6.0.8"
-    rmc-dialog "^1.0.1"
-    rmc-drawer "^0.4.11"
-    rmc-feedback "^2.0.0"
-    rmc-input-number "^1.0.0"
-    rmc-list-view "^0.11.0"
-    rmc-notification "~1.0.0"
-    rmc-nuka-carousel "~3.0.0"
-    rmc-picker "~5.0.0"
-    rmc-pull-to-refresh "~1.0.1"
-    rmc-steps "~1.0.0"
-    rmc-tabs "~1.2.0"
-    rmc-tooltip "~1.0.0"
+    "@react-spring/web" "^9.2.4"
+    ahooks "^2.10.11"
+    antd-mobile-icons "^0.2.2"
+    antd-mobile-v5-count "^1.0.1"
+    classnames "^2.3.1"
+    dayjs "^1.10.7"
+    lodash "^4.17.21"
+    rc-field-form "^1.21.2"
+    rc-progress "^3.1.4"
+    rc-tooltip "^5.1.1"
+    react-transition-group "^4.4.2"
+    react-use-gesture "^9.1.3"
+    staged-components "^1.1.1"
+    use-async-memo "^1.2.3"
 
-array-tree-filter@2.1.x, array-tree-filter@~2.1.0:
-  version "2.1.0"
-  resolved "http://172.18.1.159:4873/array-tree-filter/-/array-tree-filter-2.1.0.tgz#873ac00fec83749f255ac8dd083814b4f6329190"
-  integrity sha1-hzrAD+yDdJ8lWsjdCDgUtPYykZA=
-
-asap@~2.0.3:
-  version "2.0.6"
-  resolved "http://172.18.1.159:4873/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
-  integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
-
-babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
-  version "6.26.0"
-  resolved "http://172.18.1.159:4873/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
-  integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
-  dependencies:
-    core-js "^2.4.0"
-    regenerator-runtime "^0.11.0"
+async-validator@^4.0.2:
+  version "4.0.3"
+  resolved "http://172.18.1.159:4873/async-validator/-/async-validator-4.0.3.tgz#c8ecd6b28fc8e18b14be4ec7c704641f999d377d"
+  integrity sha1-yOzWso/I4YsUvk7HxwRkH5mdN30=
 
 browserslist@^4.16.6:
   version "4.17.1"
@@ -369,7 +424,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.4, classnames@^2.2.5, classnames@^2.2.6:
+classnames@2.x, classnames@^2.2.1, classnames@^2.2.6, classnames@^2.3.1:
   version "2.3.1"
   resolved "http://172.18.1.159:4873/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha1-38+jiR4wbsHa0QXQ6I9EF7hTXo4=
@@ -386,18 +441,6 @@ color-name@1.1.3:
   resolved "http://172.18.1.159:4873/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-component-classes@^1.2.5:
-  version "1.2.6"
-  resolved "http://172.18.1.159:4873/component-classes/-/component-classes-1.2.6.tgz#c642394c3618a4d8b0b8919efccbbd930e5cd691"
-  integrity sha1-xkI5TDYYpNiwuJGe/Mu9kw5c1pE=
-  dependencies:
-    component-indexof "0.0.3"
-
-component-indexof@0.0.3:
-  version "0.0.3"
-  resolved "http://172.18.1.159:4873/component-indexof/-/component-indexof-0.0.3.tgz#11d091312239eb8f32c8f25ae9cb002ffe8d3c24"
-  integrity sha1-EdCRMSI5648yyPJa6csAL/6NPCQ=
-
 convert-source-map@^1.7.0:
   version "1.8.0"
   resolved "http://172.18.1.159:4873/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
@@ -412,31 +455,15 @@ copy-anything@^2.0.1:
   dependencies:
     is-what "^3.12.0"
 
-core-js@^1.0.0:
-  version "1.2.7"
-  resolved "http://172.18.1.159:4873/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
-  integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
+csstype@^3.0.2:
+  version "3.0.9"
+  resolved "http://172.18.1.159:4873/csstype/-/csstype-3.0.9.tgz#6410af31b26bd0520933d02cbc64fce9ce3fbf0b"
+  integrity sha1-ZBCvMbJr0FIJM9AsvGT86c4/vws=
 
-core-js@^2.4.0:
-  version "2.6.12"
-  resolved "http://172.18.1.159:4873/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
-  integrity sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=
-
-create-react-class@^15.6.0:
-  version "15.7.0"
-  resolved "http://172.18.1.159:4873/create-react-class/-/create-react-class-15.7.0.tgz#7499d7ca2e69bb51d13faf59bd04f0c65a1d6c1e"
-  integrity sha1-dJnXyi5pu1HRP69ZvQTwxlodbB4=
-  dependencies:
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
-css-animation@1.x, css-animation@^1.3.2:
-  version "1.6.1"
-  resolved "http://172.18.1.159:4873/css-animation/-/css-animation-1.6.1.tgz#162064a3b0d51f958b7ff37b3d6d4de18e17039e"
-  integrity sha1-FiBko7DVH5WLf/N7PW1N4Y4XA54=
-  dependencies:
-    babel-runtime "6.x"
-    component-classes "^1.2.5"
+dayjs@^1.10.7, dayjs@^1.9.1:
+  version "1.10.7"
+  resolved "http://172.18.1.159:4873/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
+  integrity sha1-LPX5Gt0oEWdIRAhmoKHSbzps5Gg=
 
 debug@^3.2.6:
   version "3.2.7"
@@ -452,22 +479,23 @@ debug@^4.1.0:
   dependencies:
     ms "2.1.2"
 
-dom-align@1.x, dom-align@^1.7.0:
+dom-align@^1.7.0:
   version "1.12.2"
   resolved "http://172.18.1.159:4873/dom-align/-/dom-align-1.12.2.tgz#0f8164ebd0c9c21b0c790310493cd855892acd4b"
   integrity sha1-D4Fk69DJwhsMeQMQSTzYVYkqzUs=
+
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "http://172.18.1.159:4873/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha1-2UAFNrK/giWtmP4FLgKUUaxA6QI=
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
 
 electron-to-chromium@^1.3.846:
   version "1.3.850"
   resolved "http://172.18.1.159:4873/electron-to-chromium/-/electron-to-chromium-1.3.850.tgz#c56c72abfeab051b4b328beb894461c5912d0456"
   integrity sha1-xWxyq/6rBRtLMovriURhxZEtBFY=
-
-encoding@^0.1.11:
-  version "0.1.13"
-  resolved "http://172.18.1.159:4873/encoding/-/encoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
-  integrity sha1-VldK/deR9UqOmyeFwFgqLSYhD6k=
-  dependencies:
-    iconv-lite "^0.6.2"
 
 errno@^0.1.1:
   version "0.1.8"
@@ -495,24 +523,6 @@ estree-walker@^2.0.1:
   version "2.0.2"
   resolved "http://172.18.1.159:4873/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=
-
-exenv@^1.2.0:
-  version "1.2.2"
-  resolved "http://172.18.1.159:4873/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
-  integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
-
-fbjs@^0.8.3:
-  version "0.8.17"
-  resolved "http://172.18.1.159:4873/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
-  integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
-  dependencies:
-    core-js "^1.0.0"
-    isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.18"
 
 fsevents@~2.3.2:
   version "2.3.2"
@@ -577,17 +587,15 @@ iconv-lite@^0.4.4:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-iconv-lite@^0.6.2:
-  version "0.6.3"
-  resolved "http://172.18.1.159:4873/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
-  integrity sha1-pS+AvzjaGVLrXGgXkHGYcaGnJQE=
-  dependencies:
-    safer-buffer ">= 2.1.2 < 3.0.0"
-
 image-size@~0.5.0:
   version "0.5.5"
   resolved "http://172.18.1.159:4873/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
   integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
+
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "http://172.18.1.159:4873/intersection-observer/-/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
+  integrity sha1-7ha+6XjbU1FurS8KgVSwm0ALvck=
 
 is-core-module@^2.2.0:
   version "2.6.0"
@@ -595,11 +603,6 @@ is-core-module@^2.2.0:
   integrity sha1-11U7JSb+Wbkro+QMjfdX7Ipwnhk=
   dependencies:
     has "^1.0.3"
-
-is-stream@^1.0.1:
-  version "1.1.0"
-  resolved "http://172.18.1.159:4873/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
-  integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
 
 is-what@^3.12.0:
   version "3.14.1"
@@ -611,13 +614,10 @@ isarray@0.0.1:
   resolved "http://172.18.1.159:4873/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
   integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
 
-isomorphic-fetch@^2.1.1:
+js-cookie@^2.2.1:
   version "2.2.1"
-  resolved "http://172.18.1.159:4873/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
-  integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
-  dependencies:
-    node-fetch "^1.0.1"
-    whatwg-fetch ">=0.10.0"
+  resolved "http://172.18.1.159:4873/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha1-aeEG3F1YBolFYpAqpbrsN0Tpsrg=
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -653,7 +653,27 @@ less@^4.1.1:
     needle "^2.5.2"
     source-map "~0.6.0"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "http://172.18.1.159:4873/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "http://172.18.1.159:4873/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "http://172.18.1.159:4873/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "http://172.18.1.159:4873/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
+
+loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://172.18.1.159:4873/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -720,25 +740,12 @@ needle@^2.5.2:
     iconv-lite "^0.4.4"
     sax "^1.2.4"
 
-node-fetch@^1.0.1:
-  version "1.7.3"
-  resolved "http://172.18.1.159:4873/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
-  integrity sha1-mA9vcthSEaU0fGsrwYxbhMPrR+8=
-  dependencies:
-    encoding "^0.1.11"
-    is-stream "^1.0.1"
-
 node-releases@^1.1.76:
   version "1.1.76"
   resolved "http://172.18.1.159:4873/node-releases/-/node-releases-1.1.76.tgz#df245b062b0cafbd5282ab6792f7dccc2d97f36e"
   integrity sha1-3yRbBisMr71SgqtnkvfczC2X824=
 
-normalize.css@^7.0.0:
-  version "7.0.0"
-  resolved "http://172.18.1.159:4873/normalize.css/-/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
-  integrity sha1-q/sd2CRwZ04DIrU86xqvQSk45L8=
-
-object-assign@4.x, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.1.1:
   version "4.1.1"
   resolved "http://172.18.1.159:4873/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
@@ -760,11 +767,6 @@ path-to-regexp@^1.7.0:
   dependencies:
     isarray "0.0.1"
 
-performance-now@^2.1.0:
-  version "2.1.0"
-  resolved "http://172.18.1.159:4873/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
-  integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-
 picomatch@^2.2.2:
   version "2.3.0"
   resolved "http://172.18.1.159:4873/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
@@ -784,14 +786,7 @@ postcss@^8.3.6:
     nanoid "^3.1.25"
     source-map-js "^0.6.2"
 
-promise@^7.1.1:
-  version "7.3.1"
-  resolved "http://172.18.1.159:4873/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
-  integrity sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=
-  dependencies:
-    asap "~2.0.3"
-
-prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "http://172.18.1.159:4873/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -805,117 +800,70 @@ prr@~1.0.1:
   resolved "http://172.18.1.159:4873/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
   integrity sha1-0/wRS6BplaRexok/SEzrHXj19HY=
 
-raf@^3.1.0, raf@^3.3.2, raf@^3.4.0:
-  version "3.4.1"
-  resolved "http://172.18.1.159:4873/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
-  integrity sha1-B0LpmkplUvRF1z4+4DKK8P8e3jk=
+rc-align@^4.0.0:
+  version "4.0.11"
+  resolved "http://172.18.1.159:4873/rc-align/-/rc-align-4.0.11.tgz#8198c62db266bc1b8ef05e56c13275bf72628a5e"
+  integrity sha1-gZjGLbJmvBuO8F5WwTJ1v3Jiil4=
   dependencies:
-    performance-now "^2.1.0"
-
-rc-align@^2.4.0:
-  version "2.4.5"
-  resolved "http://172.18.1.159:4873/rc-align/-/rc-align-2.4.5.tgz#c941a586f59d1017f23a428f0b468663fb7102ab"
-  integrity sha1-yUGlhvWdEBfyOkKPC0aGY/txAqs=
-  dependencies:
-    babel-runtime "^6.26.0"
+    "@babel/runtime" "^7.10.1"
+    classnames "2.x"
     dom-align "^1.7.0"
-    prop-types "^15.5.8"
-    rc-util "^4.0.4"
+    lodash "^4.17.21"
+    rc-util "^5.3.0"
+    resize-observer-polyfill "^1.5.1"
 
-rc-animate@2.x, rc-animate@^2.4.4:
-  version "2.11.1"
-  resolved "http://172.18.1.159:4873/rc-animate/-/rc-animate-2.11.1.tgz#2666eeb6f1f2a495a13b2af09e236712278fdb2c"
-  integrity sha1-JmbutvHypJWhOyrwniNnEieP2yw=
+rc-field-form@^1.21.2:
+  version "1.21.2"
+  resolved "http://172.18.1.159:4873/rc-field-form/-/rc-field-form-1.21.2.tgz#85bda1ee006ae9f1d146e1000337c69b4bb6d101"
+  integrity sha1-hb2h7gBq6fHRRuEAAzfGm0u20QE=
   dependencies:
-    babel-runtime "6.x"
+    "@babel/runtime" "^7.8.4"
+    async-validator "^4.0.2"
+    rc-util "^5.8.0"
+
+rc-motion@^2.0.0:
+  version "2.4.4"
+  resolved "http://172.18.1.159:4873/rc-motion/-/rc-motion-2.4.4.tgz#e995d5fa24fc93065c24f714857cf2677d655bb0"
+  integrity sha1-6ZXV+iT8kwZcJPcUhXzyZ31lW7A=
+  dependencies:
+    "@babel/runtime" "^7.11.1"
+    classnames "^2.2.1"
+    rc-util "^5.2.1"
+
+rc-progress@^3.1.4:
+  version "3.1.4"
+  resolved "http://172.18.1.159:4873/rc-progress/-/rc-progress-3.1.4.tgz#66040d0fae7d8ced2b38588378eccb2864bad615"
+  integrity sha1-ZgQND659jO0rOFiDeOzLKGS61hU=
+  dependencies:
+    "@babel/runtime" "^7.10.1"
     classnames "^2.2.6"
-    css-animation "^1.3.2"
-    prop-types "15.x"
-    raf "^3.4.0"
-    rc-util "^4.15.3"
-    react-lifecycles-compat "^3.0.4"
 
-rc-checkbox@~2.0.0:
-  version "2.0.3"
-  resolved "http://172.18.1.159:4873/rc-checkbox/-/rc-checkbox-2.0.3.tgz#436a9d508948e224980f0535ea738b48177a8f25"
-  integrity sha1-Q2qdUIlI4iSYDwU16nOLSBd6jyU=
+rc-tooltip@^5.1.1:
+  version "5.1.1"
+  resolved "http://172.18.1.159:4873/rc-tooltip/-/rc-tooltip-5.1.1.tgz#94178ed162d0252bc4993b725f5dc2ac0fccf154"
+  integrity sha1-lBeO0WLQJSvEmTtyX13CrA/M8VQ=
   dependencies:
-    babel-runtime "^6.23.0"
-    classnames "2.x"
-    prop-types "15.x"
-    rc-util "^4.0.4"
+    "@babel/runtime" "^7.11.2"
+    rc-trigger "^5.0.0"
 
-rc-collapse@~1.9.1:
-  version "1.9.3"
-  resolved "http://172.18.1.159:4873/rc-collapse/-/rc-collapse-1.9.3.tgz#d9741db06a823353e1fd1aec3ba4c0f9d8af4b26"
-  integrity sha1-2XQdsGqCM1Ph/RrsO6TA+divSyY=
+rc-trigger@^5.0.0:
+  version "5.2.10"
+  resolved "http://172.18.1.159:4873/rc-trigger/-/rc-trigger-5.2.10.tgz#8a0057a940b1b9027eaa33beec8a6ecd85cce2b1"
+  integrity sha1-igBXqUCxuQJ+qjO+7IpuzYXM4rE=
   dependencies:
-    classnames "2.x"
-    css-animation "1.x"
-    prop-types "^15.5.6"
-    rc-animate "2.x"
-
-rc-gesture@~0.0.18, rc-gesture@~0.0.22:
-  version "0.0.22"
-  resolved "http://172.18.1.159:4873/rc-gesture/-/rc-gesture-0.0.22.tgz#fbcbdd5b46387a978b3ede48b42748e8ff77dddd"
-  integrity sha1-+8vdW0Y4epeLPt5ItCdI6P933d0=
-  dependencies:
-    babel-runtime "6.x"
-
-rc-slider@~8.2.0:
-  version "8.2.0"
-  resolved "http://172.18.1.159:4873/rc-slider/-/rc-slider-8.2.0.tgz#ae37d17144cad60e1da6eac0ee4ffcfea0b0a6e8"
-  integrity sha1-rjfRcUTK1g4dpurA7k/8/qCwpug=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.5"
-    prop-types "^15.5.4"
-    rc-tooltip "^3.4.2"
-    rc-util "^4.0.4"
-    shallowequal "^1.0.1"
-    warning "^3.0.0"
-
-rc-swipeout@~2.0.0:
-  version "2.0.11"
-  resolved "http://172.18.1.159:4873/rc-swipeout/-/rc-swipeout-2.0.11.tgz#dfad9c7b38a15ea0376e39cb3356e36fed7a4155"
-  integrity sha1-362cezihXqA3bjnLM1bjb+16QVU=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "2.x"
-    rc-gesture "~0.0.22"
-    react-native-swipeout "^2.2.2"
-
-rc-tooltip@^3.4.2:
-  version "3.7.3"
-  resolved "http://172.18.1.159:4873/rc-tooltip/-/rc-tooltip-3.7.3.tgz#280aec6afcaa44e8dff0480fbaff9e87fc00aecc"
-  integrity sha1-KArsavyqROjf8EgPuv+eh/wArsw=
-  dependencies:
-    babel-runtime "6.x"
-    prop-types "^15.5.8"
-    rc-trigger "^2.2.2"
-
-rc-trigger@^2.2.2:
-  version "2.6.5"
-  resolved "http://172.18.1.159:4873/rc-trigger/-/rc-trigger-2.6.5.tgz#140a857cf28bd0fa01b9aecb1e26a50a700e9885"
-  integrity sha1-FAqFfPKL0PoBua7LHialCnAOmIU=
-  dependencies:
-    babel-runtime "6.x"
+    "@babel/runtime" "^7.11.2"
     classnames "^2.2.6"
-    prop-types "15.x"
-    rc-align "^2.4.0"
-    rc-animate "2.x"
-    rc-util "^4.4.0"
-    react-lifecycles-compat "^3.0.4"
+    rc-align "^4.0.0"
+    rc-motion "^2.0.0"
+    rc-util "^5.5.0"
 
-rc-util@4.x, rc-util@^4.0.4, rc-util@^4.15.3, rc-util@^4.4.0:
-  version "4.21.1"
-  resolved "http://172.18.1.159:4873/rc-util/-/rc-util-4.21.1.tgz#88602d0c3185020aa1053d9a1e70eac161becb05"
-  integrity sha1-iGAtDDGFAgqhBT2aHnDqwWG+ywU=
+rc-util@^5.2.1, rc-util@^5.3.0, rc-util@^5.5.0, rc-util@^5.8.0:
+  version "5.14.0"
+  resolved "http://172.18.1.159:4873/rc-util/-/rc-util-5.14.0.tgz#52c650e27570c2c47f7936c7d32eaec5212492a8"
+  integrity sha1-UsZQ4nVwwsR/eTbH0y6uxSEkkqg=
   dependencies:
-    add-dom-event-listener "^1.1.0"
-    prop-types "^15.5.10"
+    "@babel/runtime" "^7.12.5"
     react-is "^16.12.0"
-    react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
 
 react-dom@^17.0.0:
@@ -931,20 +879,6 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "http://172.18.1.159:4873/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
-
-react-lifecycles-compat@^3.0.4:
-  version "3.0.4"
-  resolved "http://172.18.1.159:4873/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-  integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
-
-react-native-swipeout@^2.2.2:
-  version "2.3.6"
-  resolved "http://172.18.1.159:4873/react-native-swipeout/-/react-native-swipeout-2.3.6.tgz#47dac8a835825cf3f2eef9e495574a3d9ab6d3fa"
-  integrity sha1-R9rIqDWCXPPy7vnklVdKPZq20/o=
-  dependencies:
-    create-react-class "^15.6.0"
-    prop-types "^15.5.10"
-    react-tween-state "^0.1.5"
 
 react-refresh@^0.10.0:
   version "0.10.0"
@@ -980,13 +914,20 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-tween-state@^0.1.5:
-  version "0.1.5"
-  resolved "http://172.18.1.159:4873/react-tween-state/-/react-tween-state-0.1.5.tgz#e98b066551efb93cb92dd1be14995c2e3deae339"
-  integrity sha1-6YsGZVHvuTy5LdG+FJlcLj3q4zk=
+react-transition-group@^4.4.2:
+  version "4.4.2"
+  resolved "http://172.18.1.159:4873/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
+  integrity sha1-i1mlbwnO17VcvVPDZ2i5IokNVHA=
   dependencies:
-    raf "^3.1.0"
-    tween-functions "^1.0.1"
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
+
+react-use-gesture@^9.1.3:
+  version "9.1.3"
+  resolved "http://172.18.1.159:4873/react-use-gesture/-/react-use-gesture-9.1.3.tgz#92bd143e4f58e69bd424514a5bfccba2a1d62ec0"
+  integrity sha1-kr0UPk9Y5pvUJFFKW/zLoqHWLsA=
 
 react@^17.0.0:
   version "17.0.2"
@@ -996,15 +937,15 @@ react@^17.0.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-regenerator-runtime@^0.11.0:
-  version "0.11.1"
-  resolved "http://172.18.1.159:4873/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
-  integrity sha1-vgWtf5v30i4Fb5cmzuUBf78Z4uk=
-
 regenerator-runtime@^0.13.4:
   version "0.13.9"
   resolved "http://172.18.1.159:4873/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
+
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "http://172.18.1.159:4873/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=
 
 resolve-pathname@^3.0.0:
   version "3.0.0"
@@ -1019,158 +960,6 @@ resolve@^1.20.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
-rmc-align@~1.0.0:
-  version "1.0.0"
-  resolved "http://172.18.1.159:4873/rmc-align/-/rmc-align-1.0.0.tgz#8d64ab484609a041ab424506012a15b7c5b933dd"
-  integrity sha1-jWSrSEYJoEGrQkUGASoVt8W5M90=
-  dependencies:
-    babel-runtime "6.x"
-    dom-align "1.x"
-    rc-util "4.x"
-
-rmc-calendar@^1.0.0:
-  version "1.1.4"
-  resolved "http://172.18.1.159:4873/rmc-calendar/-/rmc-calendar-1.1.4.tgz#7db4990087877cd49a7772f4524d33b8016d3bd2"
-  integrity sha1-fbSZAIeHfNSad3L0Uk0zuAFtO9I=
-  dependencies:
-    babel-runtime "^6.26.0"
-    rc-animate "^2.4.4"
-    rmc-date-picker "^6.0.8"
-
-rmc-cascader@~5.0.0:
-  version "5.0.3"
-  resolved "http://172.18.1.159:4873/rmc-cascader/-/rmc-cascader-5.0.3.tgz#c605b1eac6613e4c54aa6aed2cbae7f9c5a8c65f"
-  integrity sha1-xgWx6sZhPkxUqmrtLLrn+cWoxl8=
-  dependencies:
-    array-tree-filter "2.1.x"
-    babel-runtime "6.x"
-    rmc-picker "~5.0.0"
-
-rmc-date-picker@^6.0.8:
-  version "6.0.10"
-  resolved "http://172.18.1.159:4873/rmc-date-picker/-/rmc-date-picker-6.0.10.tgz#34dc7dfd424248be2d43527421576247c31583f6"
-  integrity sha1-NNx9/UJCSL4tQ1J0IVdiR8MVg/Y=
-  dependencies:
-    babel-runtime "6.x"
-    rmc-picker "~5.0.0"
-
-rmc-dialog@^1.0.1, rmc-dialog@^1.1.1:
-  version "1.1.1"
-  resolved "http://172.18.1.159:4873/rmc-dialog/-/rmc-dialog-1.1.1.tgz#1d7fbc6b2cad5b0b53fbab71fe29636d76f78217"
-  integrity sha1-HX+8ayytWwtT+6tx/iljbXb3ghc=
-  dependencies:
-    babel-runtime "6.x"
-    rc-animate "2.x"
-
-rmc-drawer@^0.4.11:
-  version "0.4.11"
-  resolved "http://172.18.1.159:4873/rmc-drawer/-/rmc-drawer-0.4.11.tgz#9a8c6125a4ccd37b916f32f7e8b477d11d413ee3"
-  integrity sha1-moxhJaTM03uRbzL36LR30R1BPuM=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.4"
-    prop-types "^15.5.10"
-
-rmc-feedback@^2.0.0:
-  version "2.0.0"
-  resolved "http://172.18.1.159:4873/rmc-feedback/-/rmc-feedback-2.0.0.tgz#cbc6cb3ae63c7a635eef0e25e4fbaf5ac366eeaa"
-  integrity sha1-y8bLOuY8emNe7w4l5PuvWsNm7qo=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.5"
-
-rmc-input-number@^1.0.0:
-  version "1.0.5"
-  resolved "http://172.18.1.159:4873/rmc-input-number/-/rmc-input-number-1.0.5.tgz#42e02a27b0c3c366be9ff0ce19d818b71e406f8f"
-  integrity sha1-QuAqJ7DDw2a+n/DOGdgYtx5Ab48=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.0"
-    rmc-feedback "^2.0.0"
-
-rmc-list-view@^0.11.0:
-  version "0.11.5"
-  resolved "http://172.18.1.159:4873/rmc-list-view/-/rmc-list-view-0.11.5.tgz#8e152a5dbec6aec45a8ccd1f33cb8ef140b93a1e"
-  integrity sha1-jhUqXb7GrsRajM0fM8uO8UC5Oh4=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.5"
-    fbjs "^0.8.3"
-    prop-types "^15.5.8"
-    warning "^3.0.0"
-    zscroller "~0.4.0"
-
-rmc-notification@~1.0.0:
-  version "1.0.0"
-  resolved "http://172.18.1.159:4873/rmc-notification/-/rmc-notification-1.0.0.tgz#1fcee98f99b9733f7ce63a91d7663a578743d075"
-  integrity sha1-H87pj5m5cz985jqR12Y6V4dD0HU=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "2.x"
-    prop-types "^15.5.8"
-    rc-animate "2.x"
-    rc-util "^4.0.4"
-
-rmc-nuka-carousel@~3.0.0:
-  version "3.0.1"
-  resolved "http://172.18.1.159:4873/rmc-nuka-carousel/-/rmc-nuka-carousel-3.0.1.tgz#a2a997676b0f986354976dac39ec66d8701b4b71"
-  integrity sha1-oqmXZ2sPmGNUl22sOexm2HAbS3E=
-  dependencies:
-    exenv "^1.2.0"
-    raf "^3.3.2"
-
-rmc-picker@~5.0.0:
-  version "5.0.10"
-  resolved "http://172.18.1.159:4873/rmc-picker/-/rmc-picker-5.0.10.tgz#9ca0acf45ad2c8afe9015a103a898436d825e18f"
-  integrity sha1-nKCs9FrSyK/pAVoQOomENtgl4Y8=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.6"
-    rmc-dialog "^1.1.1"
-    rmc-feedback "^2.0.0"
-
-rmc-pull-to-refresh@~1.0.1:
-  version "1.0.13"
-  resolved "http://172.18.1.159:4873/rmc-pull-to-refresh/-/rmc-pull-to-refresh-1.0.13.tgz#8fc1bd36c9b09fcd50e8d8632f556b6a8462ef1a"
-  integrity sha1-j8G9Nsmwn81Q6NhjL1VraoRi7xo=
-  dependencies:
-    babel-runtime "6.x"
-    classnames "^2.2.5"
-
-rmc-steps@~1.0.0:
-  version "1.0.1"
-  resolved "http://172.18.1.159:4873/rmc-steps/-/rmc-steps-1.0.1.tgz#b63a0f1ddd2826d03b1bcec85963077255e8f798"
-  integrity sha1-tjoPHd0oJtA7G87IWWMHclXo95g=
-  dependencies:
-    babel-runtime "^6.23.0"
-    classnames "^2.2.3"
-
-rmc-tabs@~1.2.0:
-  version "1.2.29"
-  resolved "http://172.18.1.159:4873/rmc-tabs/-/rmc-tabs-1.2.29.tgz#dd2191525debbf8521e85aeb6d97670f652e4c83"
-  integrity sha1-3SGRUl3rv4Uh6FrrbZdnD2UuTIM=
-  dependencies:
-    babel-runtime "6.x"
-    rc-gesture "~0.0.18"
-
-rmc-tooltip@~1.0.0:
-  version "1.0.1"
-  resolved "http://172.18.1.159:4873/rmc-tooltip/-/rmc-tooltip-1.0.1.tgz#5af16a3e8f764fa26d2b11932975bd88b1d848d2"
-  integrity sha1-WvFqPo92T6JtKxGTKXW9iLHYSNI=
-  dependencies:
-    babel-runtime "6.x"
-    rmc-trigger "1.x"
-
-rmc-trigger@1.x:
-  version "1.0.12"
-  resolved "http://172.18.1.159:4873/rmc-trigger/-/rmc-trigger-1.0.12.tgz#34df10a16f1fc8f9e8b14d13d58cabe294ab7488"
-  integrity sha1-NN8QoW8fyPnosU0T1Yyr4pSrdIg=
-  dependencies:
-    babel-runtime "6.x"
-    rc-animate "2.x"
-    rc-util "4.x"
-    rmc-align "~1.0.0"
-
 rollup@^2.38.5:
   version "2.57.0"
   resolved "http://172.18.1.159:4873/rollup/-/rollup-2.57.0.tgz#c1694475eb22e1022477c0f4635fd0ac80713173"
@@ -1183,7 +972,7 @@ safe-buffer@~5.1.1:
   resolved "http://172.18.1.159:4873/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
 
-"safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0":
+"safer-buffer@>= 2.1.2 < 3":
   version "2.1.2"
   resolved "http://172.18.1.159:4873/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
@@ -1201,6 +990,11 @@ scheduler@^0.20.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+screenfull@^5.0.0:
+  version "5.1.0"
+  resolved "http://172.18.1.159:4873/screenfull/-/screenfull-5.1.0.tgz#85c13c70f4ead4c1b8a935c70010dfdcd2c0e5c8"
+  integrity sha1-hcE8cPTq1MG4qTXHABDf3NLA5cg=
+
 semver@^5.6.0:
   version "5.7.1"
   resolved "http://172.18.1.159:4873/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
@@ -1211,12 +1005,7 @@ semver@^6.3.0:
   resolved "http://172.18.1.159:4873/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=
 
-setimmediate@^1.0.5:
-  version "1.0.5"
-  resolved "http://172.18.1.159:4873/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
-  integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
-
-shallowequal@^1.0.1, shallowequal@^1.1.0:
+shallowequal@^1.1.0:
   version "1.1.0"
   resolved "http://172.18.1.159:4873/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha1-GI1SHelbkIdAT9TctosT3wrk5/g=
@@ -1235,6 +1024,11 @@ source-map@~0.6.0:
   version "0.6.1"
   resolved "http://172.18.1.159:4873/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+
+staged-components@^1.1.1:
+  version "1.1.1"
+  resolved "http://172.18.1.159:4873/staged-components/-/staged-components-1.1.1.tgz#9e097e3ffa4677ef8d90cde2aff0d953db40ef68"
+  integrity sha1-ngl+P/pGd++NkM3ir/DZU9tA72g=
 
 supports-color@^5.3.0:
   version "5.5.0"
@@ -1263,15 +1057,10 @@ tslib@^1.10.0:
   resolved "http://172.18.1.159:4873/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
-tween-functions@^1.0.1:
-  version "1.2.0"
-  resolved "http://172.18.1.159:4873/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
-  integrity sha1-GuOlDnxguz3vd06scHrLynO7w/8=
-
-ua-parser-js@^0.7.18:
-  version "0.7.28"
-  resolved "http://172.18.1.159:4873/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
-  integrity sha1-i6BOZT81ziECOcZGYWhb+RId7DE=
+use-async-memo@^1.2.3:
+  version "1.2.3"
+  resolved "http://172.18.1.159:4873/use-async-memo/-/use-async-memo-1.2.3.tgz#fe49d7ae1cd850199cf9e4a8ee483e31ed85659f"
+  integrity sha1-/knXrhzYUBmc+eSo7kg+Me2FZZ8=
 
 value-equal@^1.0.1:
   version "1.0.1"
@@ -1289,22 +1078,3 @@ vite@^2.5.4:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.2"
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "http://172.18.1.159:4873/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
-  dependencies:
-    loose-envify "^1.0.0"
-
-whatwg-fetch@>=0.10.0:
-  version "3.6.2"
-  resolved "http://172.18.1.159:4873/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
-  integrity sha1-3O0k838mJO0CgXJdUdDi4/5nf4w=
-
-zscroller@~0.4.0:
-  version "0.4.8"
-  resolved "http://172.18.1.159:4873/zscroller/-/zscroller-0.4.8.tgz#69eed68690808eedf81f9714014356b36cdd20f4"
-  integrity sha1-ae7WhpCAju34H5cUAUNWs2zdIPQ=
-  dependencies:
-    babel-runtime "6.x"
