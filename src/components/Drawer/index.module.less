@@ -1,0 +1,33 @@
+.Drawer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 50px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  overflow-y: auto;
+
+  .content {
+    float: right;
+    width: 100px;
+    height: inherit;
+    border-left: 5px blueviolet solid;
+    background-color: #fff;
+    transition: all 2s linear 1s;
+  }
+
+  .item {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: blueviolet;
+    padding: 0 10px;
+    border-bottom: 1px blueviolet solid;
+  }
+  .item:active {
+    background-color: blueviolet;
+    color: #fff;
+  }
+}
