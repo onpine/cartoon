@@ -9,7 +9,8 @@ import img from "../../assets/272h.jpg";
 const Card = function (props) {
   const { history } = props;
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     history.push({ pathname: "/detail/12345" });
   }
 
