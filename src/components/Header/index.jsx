@@ -15,7 +15,7 @@ const Header = function (props) {
     <div className={Styles.header}>
       <NavBar
         mode="light"
-        backArrow={history.location.pathname === "/" ? false : true}
+        backArrow={back}
         icon={back ? <LeftOutline /> : ""}
         onBack={() => history.go(-1)}
         right={<SearchOutline fontSize={18} />}

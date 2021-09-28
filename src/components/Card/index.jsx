@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import Styles from "./index.module.less";
 import { RightOutline } from "antd-mobile-icons";
@@ -7,9 +7,9 @@ import { RightOutline } from "antd-mobile-icons";
 import img from "../../assets/272h.jpg";
 
 const Card = function (props) {
-  const history = new useHistory();
+  const { history } = props;
 
-  function handleClick(params) {
+  function handleClick() {
     history.push({ pathname: "/detail/12345" });
   }
 
@@ -25,7 +25,7 @@ const Card = function (props) {
           </div>
           <div className={Styles.text2}>
             <span>更新至第45话</span>
-            <a onClick={handleClick} href="">
+            <a onClick={handleClick}>
               查看
               <RightOutline />
             </a>
@@ -36,4 +36,4 @@ const Card = function (props) {
   );
 };
 
-export default Card;
+export default withRouter(Card);
