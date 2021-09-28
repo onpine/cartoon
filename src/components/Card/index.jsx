@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 import Styles from "./index.module.less";
-import { Icon } from "antd-mobile";
+import { RightOutline } from "antd-mobile-icons";
 
 import img from "../../assets/272h.jpg";
 
@@ -27,7 +27,7 @@ const Card = function (props) {
             <span>更新至第45话</span>
             <a onClick={handleClick} href="">
               查看
-              <Icon type="right" size="" />
+              <RightOutline />
             </a>
           </div>
         </div>

@@ -1,6 +1,12 @@
 import React, { useState, createRef } from "react";
 
-import { Icon } from "antd-mobile";
+// import { Icon } from "antd-mobile";
+import {
+  LeftOutline,
+  RightOutline,
+  UpOutline,
+  DownOutline,
+} from "antd-mobile-icons";
 import Drawer from "@/components/Drawer";
 
 import Styles from "./index.module.less";
@@ -37,18 +43,18 @@ class BottomMenu extends React.Component {
           <button onClick={this.onOpenChange}>
             <div className={Styles.changePage}>
               <span>章节列表</span>
-              <Icon type={this.state.open ? "down" : "up"} size="" />
+              {this.state.open ? <DownOutline /> : <UpOutline />}
             </div>
           </button>
           <button onClick={this.handleNext}>
             <div className={Styles.changePage}>
               <span>下一话</span>
-              <Icon type="right" size="" />
+              <RightOutline />
             </div>
           </button>
           <button onClick={this.handlePer}>
             <div className={Styles.changePage}>
-              <Icon type="left" size="" />
+              <LeftOutline />
               <span>上一话</span>
             </div>
           </button>
