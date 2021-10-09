@@ -13,7 +13,7 @@ import { render } from "less";
 class Detail extends React.Component {
   constructor(props) {
     super(props);
-    this.cid = props.match.params.id;
+    this.cid = props.match.params.cid;
     this.state = {
       lists: [],
       title: "",

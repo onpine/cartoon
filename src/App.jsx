@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Route path="/" exact component={Home}></Route>
         {/* <Route path="/home" render={() => <Redirect to="/" />} /> */}
-        <Route path="/detail/:id" component={Detail}></Route>
-        <Route path="/read/:id/:chpater" component={Read}></Route>
+        <Route path="/detail/:cid" component={Detail}></Route>
+        <Route path="/read/:cid/:chapter" component={Read}></Route>
       </Router>
     </div>
   );
