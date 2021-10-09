@@ -7,18 +7,18 @@ import { RightOutline } from "antd-mobile-icons";
 import img from "../../assets/272h.jpg";
 
 const Card = function (props) {
-  const { history } = props;
+  const { history, item } = props;
 
   function handleClick(e) {
     e.preventDefault();
-    history.push({ pathname: "/detail/12345" });
+    history.push({ pathname: `/detail/${item.cid}` });
   }
 
   return (
     <div className={Styles.card}>
       <img src={img} alt="封面" />
       <div className={Styles.content}>
-        <h3 className={Styles.title}>春娇与志明</h3>
+        <h3 className={Styles.title}>{item.cname}</h3>
         <div className={Styles.detail}>
           <div className={Styles.text}>松本智也</div>
           <div className={Styles.text}>

@@ -12,7 +12,7 @@ function App() {
         <Route path="/" exact component={Home}></Route>
         {/* <Route path="/home" render={() => <Redirect to="/" />} /> */}
         <Route path="/detail/:id" component={Detail}></Route>
-        <Route path="/read/:id" component={Read}></Route>
+        <Route path="/read/:id/:chpater" component={Read}></Route>
       </Router>
     </div>
   );
