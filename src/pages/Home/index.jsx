@@ -16,7 +16,7 @@ class Home extends Component {
 
   componentDidMount() {
     this.getData();
-    console.log(import.meta.env.VITE_API_URL);
+    // console.log(import.meta.env.VITE_API_URL);
   }
 
   async getData(params) {

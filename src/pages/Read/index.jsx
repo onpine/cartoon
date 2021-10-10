@@ -8,12 +8,6 @@ import { getChapterData } from "@/servers/read.js";
 
 import { joinParamUrl } from "@/utils/utils.js";
 
-import img1 from "@/assets/0001.jpg";
-import img2 from "@/assets/0002.jpg";
-import img3 from "@/assets/0003.jpg";
-import img4 from "@/assets/0004.jpg";
-import img5 from "@/assets/0005.jpg";
-
 class Read extends React.Component {
   constructor(props) {
     super(props);
