@@ -8,7 +8,6 @@ import Styles from "./index.module.less";
 import { getDetail } from "@/servers/detail.js";
 
 import img from "../../assets/360h.jpg";
-import { render } from "less";
 
 class Detail extends React.Component {
   constructor(props) {
