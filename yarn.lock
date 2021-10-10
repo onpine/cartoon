@@ -462,6 +462,22 @@ copy-anything@^2.0.1:
   dependencies:
     is-what "^3.12.0"
 
+cross-env@^7.0.3:
+  version "7.0.3"
+  resolved "http://172.18.1.159:4873/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+  integrity sha1-hlJkspZ33AFbqEGJGJZd0jL8VM8=
+  dependencies:
+    cross-spawn "^7.0.1"
+
+cross-spawn@^7.0.1:
+  version "7.0.3"
+  resolved "http://172.18.1.159:4873/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
+  integrity sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
+  dependencies:
+    path-key "^3.1.0"
+    shebang-command "^2.0.0"
+    which "^2.0.1"
+
 csstype@^3.0.2:
   version "3.0.9"
   resolved "http://172.18.1.159:4873/csstype/-/csstype-3.0.9.tgz#6410af31b26bd0520933d02cbc64fce9ce3fbf0b"
@@ -626,6 +642,11 @@ isarray@0.0.1:
   resolved "http://172.18.1.159:4873/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
   integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
 
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "http://172.18.1.159:4873/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+  integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+
 js-cookie@^2.2.1:
   version "2.2.1"
   resolved "http://172.18.1.159:4873/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
@@ -766,6 +787,11 @@ parse-node-version@^1.0.1:
   version "1.0.1"
   resolved "http://172.18.1.159:4873/parse-node-version/-/parse-node-version-1.0.1.tgz#e2b5dbede00e7fa9bc363607f53327e8b073189b"
   integrity sha1-4rXb7eAOf6m8NjYH9TMn6LBzGJs=
+
+path-key@^3.1.0:
+  version "3.1.1"
+  resolved "http://172.18.1.159:4873/path-key/-/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
+  integrity sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
 
 path-parse@^1.0.6:
   version "1.0.7"
@@ -1022,6 +1048,18 @@ shallowequal@^1.1.0:
   resolved "http://172.18.1.159:4873/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha1-GI1SHelbkIdAT9TctosT3wrk5/g=
 
+shebang-command@^2.0.0:
+  version "2.0.0"
+  resolved "http://172.18.1.159:4873/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  integrity sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=
+  dependencies:
+    shebang-regex "^3.0.0"
+
+shebang-regex@^3.0.0:
+  version "3.0.0"
+  resolved "http://172.18.1.159:4873/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
+
 source-map-js@^0.6.2:
   version "0.6.2"
   resolved "http://172.18.1.159:4873/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
@@ -1090,3 +1128,10 @@ vite@^2.5.4:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.2"
+
+which@^2.0.1:
+  version "2.0.2"
+  resolved "http://172.18.1.159:4873/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
+  integrity sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=
+  dependencies:
+    isexe "^2.0.0"
