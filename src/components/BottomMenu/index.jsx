@@ -11,13 +11,34 @@ import Drawer from "@/components/Drawer";
 
 import Styles from "./index.module.less";
 
+import { getDetail } from "@/servers/detail.js";
+
 class BottomMenu extends React.Component {
   constructor(props) {
-    super();
+    super(props);
 
     this.state = {
       open: false,
+      lists: [],
+      title: "",
     };
+
+    this.getDetailData = this.getDetailData.bind(this);
+  }
+
+  componentDidMount() {
+    this.getDetailData();
+  }
+
+  async getDetailData() {
+    const result = await getDetail({ cid: this.props.current.cid });
+    console.log(result);
+    this.setState({
+      lists: [...result.data.data.chapters],
+      title: result.data.data.title,
+    });
+
+    this.props.setTitle(result.data.data.title);
   }
 
   onOpenChange = () => {
@@ -28,10 +49,12 @@ class BottomMenu extends React.Component {
 
   handlePer = () => {
     console.log("handlePer");
+    this.props.handlePageChange(this.props.current.chapter - 1);
   };
 
   handleNext = () => {
     console.log("handleNext");
+    this.props.handlePageChange(this.props.current.chapter + 1);
   };
 
   render() {
@@ -58,7 +81,9 @@ class BottomMenu extends React.Component {
               <span>上一话</span>
             </div>
           </button>
-          <div className={Styles.text}>第一话</div>
+          <div className={Styles.text}>
+            {this.state.lists[this.props.current.chapter - 1]}
+          </div>
         </div>
         <div className={Styles.list}>
           {this.state.open ? (
@@ -66,6 +91,11 @@ class BottomMenu extends React.Component {
               fillClose={() => {
                 this.setState({ open: false });
               }}
+              pageChange={(index) => {
+                this.props.handlePageChange(index + 1);
+              }}
+              lists={this.state.lists}
+              currentNum={this.props.current.chapter - 1}
             />
           ) : null}
         </div>

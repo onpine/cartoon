@@ -15,16 +15,30 @@
   .text {
     line-height: 50px;
     flex-grow: 1;
+    width: 130px;
     background-color: blueviolet;
     color: #fff;
     text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 10px;
   }
   button {
     border: 0;
     border-radius: 0;
+    // width: 130px;
     // border-right: 1px slateblue solid;
     overflow: hidden;
   }
+  // button:nth-child(1),
+  // :nth-child(2) {
+  //   width: 80px;
+  // }
+  // button:nth-child(3) {
+  //   width: 130px;
+  // }
   button:active {
     background-color: #9266f9;
     .changePage {

@@ -1,3 +1,4 @@
+// import { style } from "dom-helpers";
 import React from "react";
 
 import Styles from "./index.module.less";
@@ -8,19 +9,22 @@ function Drawer(props) {
   function handleSelect(index) {
     // console.log(props);
     props.fillClose();
+    props.pageChange(index);
   }
 
   return (
     <div className={Styles.Drawer} onClick={props.fillClose}>
       <div className={Styles.content} onClick={(e) => e.stopPropagation()}>
-        {arr.map((el, index) => {
+        {props.lists.map((el, index) => {
           return (
             <div
               key={index}
               onClick={() => handleSelect(index)}
-              className={Styles.item}
+              className={
+                index == props.currentNum ? Styles.active : Styles.item
+              }
             >
-              第{index + 1}话
+              {el}
             </div>
           );
         })}
