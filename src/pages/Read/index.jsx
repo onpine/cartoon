@@ -27,6 +27,20 @@ class Read extends React.Component {
     this.getData({ cid: this.state.cid, chapter: this.state.chapter });
   }
 
+  componentDidUpdate() {
+    const routerChapter = parseInt(this.props.match.params.chapter);
+    if (this.state.chapter !== routerChapter) {
+      this.setState({
+        chapter: routerChapter,
+      });
+      this.getData({
+        cid: this.state.cid,
+        chapter: routerChapter,
+      });
+    }
+    // console.log(this.state.chapter, routerChapter);
+  }
+
   async getData(data) {
     const result = await getChapterData(data);
     console.log(result.data);
@@ -43,15 +57,14 @@ class Read extends React.Component {
   }
 
   pageChange = (chapter) => {
-    this.props.history.replace(`/read/${this.state.cid}/${chapter}`);
-
     this.setState({
-      chapter,
+      picNumber: 0,
     });
+    this.props.history.replace(`/read/${this.state.cid}/${chapter}`);
   };
 
-  renderImg() {
-    let arr = new Array(this.state.picNumber).fill(1);
+  renderImg(picNumber) {
+    let arr = new Array(picNumber).fill(1);
     return arr.map((el, index) => {
       return (
         <img
@@ -71,7 +84,9 @@ class Read extends React.Component {
     return (
       <div className={Styles.read}>
         <Header title={this.state.title} back={true} />
-        <div className={Styles.list}>{this.renderImg()}</div>
+        <div className={Styles.list}>
+          {this.renderImg(this.state.picNumber)}
+        </div>
         <BottomMenu
           handlePageChange={this.pageChange}
           current={this.state}

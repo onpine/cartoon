@@ -25,7 +25,7 @@ const Card = function (props) {
             <span className={Styles.tag}>热血</span>
           </div>
           <div className={Styles.text2}>
-            <span>更新至第45话</span>
+            <span>更新至第{item.ccpn || 0}话</span>
             <a onClick={handleClick}>
               查看
               <RightOutline />
