@@ -69,7 +69,9 @@ class Detail extends React.Component {
           </div>
           <div className={Styles.all}>
             <div className={Styles.topWrap}>
-              <div className={Styles.left}>全部章节(45)</div>
+              <div className={Styles.left}>
+                全部章节({this.state.lists.length})
+              </div>
             </div>
             <Grid columns={2} gap={8}>
               {this.state.lists.map((el, index) => {
