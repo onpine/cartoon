@@ -84,7 +84,7 @@ class Read extends React.Component {
     return (
       <div className={Styles.read}>
         <Header title={this.state.title} back={true} />
-        <div className={Styles.list}>
+        <div className={Styles.list} id="imgBox">
           {this.renderImg(this.state.picNumber)}
         </div>
         <BottomMenu

@@ -15,7 +15,7 @@ const Card = function (props) {
   }
 
   return (
-    <div className={Styles.card}>
+    <div className={Styles.card} onClick={handleClick}>
       <img src={img} alt="封面" />
       <div className={Styles.content}>
         <h3 className={Styles.title}>{item.cname}</h3>

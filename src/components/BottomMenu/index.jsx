@@ -28,6 +28,10 @@ class BottomMenu extends React.Component {
 
   componentDidMount() {
     this.getDetailData();
+
+    // window.addEventListener("scroll", (e) => {
+    //   console.log(e);
+    // });
   }
 
   async getDetailData() {
@@ -57,6 +61,14 @@ class BottomMenu extends React.Component {
     this.props.handlePageChange(this.props.current.chapter + 1);
   };
 
+  backTop = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   render() {
     const sidebar = <div>hahah</div>;
 
@@ -81,7 +93,7 @@ class BottomMenu extends React.Component {
               <span>上一话</span>
             </div>
           </button>
-          <div className={Styles.text}>
+          <div className={Styles.text} onClick={() => this.backTop()}>
             {this.state.lists[this.props.current.chapter - 1]}
           </div>
         </div>
