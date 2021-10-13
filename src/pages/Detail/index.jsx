@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { Grid } from "antd-mobile";
+import { Grid, Button, Space } from "antd-mobile";
+import { DownOutline, UpOutline } from "antd-mobile-icons";
 import Header from "../../components/Header";
 
 import Styles from "./index.module.less";
@@ -16,6 +17,8 @@ class Detail extends React.Component {
     this.state = {
       lists: [],
       title: "",
+      // true:升序
+      sortType: true,
     };
     /**
      * Array.from(new Array(9)).map((_val, i) => ({
@@ -72,9 +75,26 @@ class Detail extends React.Component {
               <div className={Styles.left}>
                 全部章节({this.state.lists.length})
               </div>
+              <div className={Styles.right}>
+                <Button
+                  size="mini"
+                  fill="none"
+                  onClick={() => {
+                    this.setState({ sortType: !this.state.sortType });
+                  }}
+                >
+                  <Space>
+                    <span>{this.state.sortType ? "升序" : "降序"}</span>
+                    {this.state.sortType ? <DownOutline /> : <UpOutline />}
+                  </Space>
+                </Button>
+              </div>
             </div>
             <Grid columns={2} gap={8}>
-              {this.state.lists.map((el, index) => {
+              {(this.state.sortType
+                ? this.state.lists
+                : this.state.lists.reverse()
+              ).map((el, index) => {
                 return (
                   <Grid.Item key={index}>
                     {this.renderItem(el, index)}

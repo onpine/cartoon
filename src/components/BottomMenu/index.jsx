@@ -97,8 +97,11 @@ class BottomMenu extends React.Component {
             {this.state.lists[this.props.current.chapter - 1]}
           </div>
         </div>
-        <div className={Styles.list}>
-          {this.state.open ? (
+        <div
+          className={Styles.list}
+          style={{ display: this.state.open ? "block" : "none" }}
+        >
+          {
             <Drawer
               fillClose={() => {
                 this.setState({ open: false });
@@ -109,7 +112,7 @@ class BottomMenu extends React.Component {
               lists={this.state.lists}
               currentNum={this.props.current.chapter - 1}
             />
-          ) : null}
+          }
         </div>
       </div>
     );
