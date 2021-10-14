@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../../components/Header";
 import BottomMenu from "@/components/BottomMenu";
+import ReadSetting from "./components/ReadSetting";
+import { AppstoreOutline } from "antd-mobile-icons";
+import { Popup } from "antd-mobile";
 
 import Styles from "./index.module.less";
 
@@ -18,6 +21,10 @@ class Read extends React.Component {
       title: "",
       cid: this.props.match.params.cid,
       chapter: parseInt(this.props.match.params.chapter),
+      // 1:从上到下，2:从左到右，3:从右到左
+      readDirection: 1,
+      // 弹出层显示
+      popupVisible: false,
     };
 
     this.renderImg = this.renderImg.bind(this);
@@ -85,8 +92,42 @@ class Read extends React.Component {
       <div className={Styles.read}>
         <Header title={this.state.title} back={true} />
         <div className={Styles.list} id="imgBox">
-          {this.renderImg(this.state.picNumber)}
+          <div
+            className={[
+              this.state.readDirection == 1 ? Styles.view1 : Styles.view2,
+            ]}
+          >
+            {this.renderImg(this.state.picNumber)}
+          </div>
         </div>
+        <div
+          className={Styles.readSetting}
+          onClick={() => {
+            this.setState({ popupVisible: true });
+          }}
+        >
+          <AppstoreOutline fontSize="35" color="blueviolet" />
+        </div>
+        <Popup
+          visible={this.state.popupVisible}
+          onMaskClick={() => {
+            this.setState({
+              popupVisible: false,
+            });
+          }}
+          bodyStyle={{
+            borderTopLeftRadius: "8px",
+            borderTopRightRadius: "8px",
+            minHeight: "30vh",
+          }}
+        >
+          <ReadSetting
+            data={{ readDirection: this.state.readDirection }}
+            change={(params) => {
+              this.setState(params);
+            }}
+          />
+        </Popup>
         <BottomMenu
           handlePageChange={this.pageChange}
           current={this.state}

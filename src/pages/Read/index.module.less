@@ -2,11 +2,59 @@
   height: 100vh;
   width: 100%;
   background-color: #000;
-}
-.list {
+  box-sizing: border-box;
+  padding-top: 45px;
   padding-bottom: 50px;
 }
+.readSetting {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  height: 35px;
+  width: 35px;
+  // background-color: #fff;
+  border-radius: 5px;
+  &:active {
+    background-color: #c0a4ff;
+    opacity: 0.6;
+  }
+}
+.list {
+  height: calc(100vh - 95px);
+  width: 100vw;
+  overflow: auto;
+
+  // 从上到下
+  .view1 {
+    display: block;
+  }
+  // 从左到右
+  .view2 {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 95px);
+    position: relative;
+    right: 0;
+    img {
+      width: auto;
+      height: 100% !important;
+      display: block;
+      height: 100vh;
+    }
+  }
+  // 从右到左
+  .view3 {
+    display: flex;
+    flex-direction: row-reverse;
+    img {
+      width: auto;
+      display: inline-block;
+      display: inline-block;
+    }
+  }
+}
+
 img {
   width: 100%;
-  margin-bottom: -5px;
+  margin-bottom: -3px;
 }
