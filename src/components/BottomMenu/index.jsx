@@ -48,7 +48,7 @@ class BottomMenu extends React.Component {
   onOpenChange = () => {
     console.log("onOpenChange");
     this.setState({ open: !this.state.open });
-    console.log(this.state.open);
+    // console.log(this.state.open);
   };
 
   handlePer = () => {
@@ -62,7 +62,7 @@ class BottomMenu extends React.Component {
   };
 
   backTop = () => {
-    window.scroll({
+    document.getElementById("imgBox").scroll({
       top: 0,
       left: 0,
       behavior: "smooth",
@@ -94,14 +94,14 @@ class BottomMenu extends React.Component {
             </div>
           </button>
           <div className={Styles.text} onClick={() => this.backTop()}>
-            {this.state.lists[this.props.current.chapter - 1]}
+            {this.state.lists[this.props.current.chapter - 1]?.ctitle}
           </div>
         </div>
         <div
           className={Styles.list}
-          style={{ display: this.state.open ? "block" : "none" }}
+          // style={{ display: this.state.open ? "block" : "none" }}
         >
-          {
+          {this.state.open ? (
             <Drawer
               fillClose={() => {
                 this.setState({ open: false });
@@ -112,7 +112,7 @@ class BottomMenu extends React.Component {
               lists={this.state.lists}
               currentNum={this.props.current.chapter - 1}
             />
-          }
+          ) : null}
         </div>
       </div>
     );
