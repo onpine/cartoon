@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 
+import Styles from "./index.module.less";
+
 import { getHome } from "@/servers/home.js";
 
 class Home extends Component {
@@ -29,7 +31,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className={Styles.home}>
         <Header title="虹の漫画" />
         <div>
           {this.state.lists.map((el, index) => {

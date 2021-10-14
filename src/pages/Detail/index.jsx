@@ -16,6 +16,7 @@ class Detail extends React.Component {
     this.cid = props.match.params.cid;
     this.state = {
       lists: [],
+      reverseLists: [],
       title: "",
       // true:升序
       sortType: true,
@@ -40,6 +41,7 @@ class Detail extends React.Component {
     console.log(result);
     this.setState({
       lists: [...result.data.data.chapters],
+      reverseLists: [...result.data.data.chapters].reverse(),
       title: result.data.data.title,
     });
   }
@@ -58,7 +60,7 @@ class Detail extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={Styles.detail}>
         <Header title={this.state.title} back={true} />
         <div className={Styles.detail}>
           <img src={img} alt="封面" />
@@ -90,7 +92,7 @@ class Detail extends React.Component {
             <Grid columns={2} gap={8}>
               {(this.state.sortType
                 ? this.state.lists
-                : this.state.lists.reverse()
+                : this.state.reverseLists
               ).map((el, index) => {
                 return (
                   <Grid.Item key={index}>
