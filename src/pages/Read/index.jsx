@@ -34,7 +34,7 @@ class Read extends React.Component {
     this.getData({ cid: this.state.cid, chapter: this.state.chapter });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     const routerChapter = parseInt(this.props.match.params.chapter);
     if (this.state.chapter !== routerChapter) {
       this.setState({
@@ -45,7 +45,19 @@ class Read extends React.Component {
         chapter: routerChapter,
       });
     }
-    // console.log(this.state.chapter, routerChapter);
+    if (prevState.readDirection != this.state.readDirection) {
+      const imgBox = document.getElementById("imgBox");
+      if (this.state.readDirection == 3) {
+        // console.log("从右到左", imgBox.scrollWidth);
+        imgBox.scroll({
+          left: imgBox.scrollWidth,
+        });
+      } else if (this.state.readDirection == 2) {
+        imgBox.scroll({
+          left: 0,
+        });
+      }
+    }
   }
 
   async getData(data) {
@@ -94,10 +106,12 @@ class Read extends React.Component {
         <div className={Styles.list} id="imgBox">
           <div
             className={[
-              this.state.readDirection == 1 ? Styles.view1 : Styles.view2,
+              this.state.readDirection == 1 ? Styles.view1 : Styles.view3,
             ]}
           >
-            {this.renderImg(this.state.picNumber)}
+            {this.state.readDirection != 3
+              ? this.renderImg(this.state.picNumber, this.state.readDirection)
+              : this.renderImg(this.state.picNumber).reverse()}
           </div>
         </div>
         <div

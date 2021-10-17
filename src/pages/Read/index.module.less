@@ -44,12 +44,17 @@
   }
   // 从右到左
   .view3 {
+    // direction: rtl;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    height: calc(100vh - 95px);
+    position: relative;
+    right: 0;
     img {
       width: auto;
-      display: inline-block;
-      display: inline-block;
+      height: 100% !important;
+      display: block;
+      height: 100vh;
     }
   }
 }

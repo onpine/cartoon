@@ -14,6 +14,7 @@ function ReadSetting(props) {
       readDirection: value,
     });
     props.change({ readDirection: value });
+    // console.log(document.getElementById("imgBox").scrollWidth);
   };
 
   return (
@@ -45,7 +46,6 @@ function ReadSetting(props) {
           从左到右
         </button>
         <button
-          disabled
           className={
             state.readDirection == 3 ? Styles["button-active"] : undefined
           }
