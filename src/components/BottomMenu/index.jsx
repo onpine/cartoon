@@ -62,9 +62,10 @@ class BottomMenu extends React.Component {
   };
 
   backTop = () => {
-    document.getElementById("imgBox").scroll({
+    const imgBox = document.getElementById("imgBox");
+    imgBox.scroll({
       top: 0,
-      left: 0,
+      left: this.props.current.readDirection == 3 ? imgBox.scrollWidth : 0,
       behavior: "smooth",
     });
   };
