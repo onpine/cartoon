@@ -35,7 +35,7 @@ class Home extends Component {
         <Header title="虹の漫画" />
         <div>
           {this.state.lists.map((el, index) => {
-            return <Card item={el} key={index} />;
+            return <Card item={el} key={el.cid} />;
           })}
         </div>
       </div>
