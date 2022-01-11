@@ -14,6 +14,7 @@ class Home extends Component {
     };
 
     this.getData = this.getData.bind(this);
+    this.handleRight = this.handleRight.bind(this);
   }
 
   componentDidMount() {
@@ -28,11 +29,15 @@ class Home extends Component {
       lists: [...result.data.data],
     });
   }
+  handleRight() {
+    this.props.history.push({ pathname: `/search` });
+    // console.log(this.props);
+  }
 
   render() {
     return (
       <div className={Styles.home}>
-        <Header title="虹の漫画" />
+        <Header title="虹の漫画" handleRight={this.handleRight} />
         <div>
           {this.state.lists.map((el, index) => {
             return <Card item={el} key={el.cid} />;
