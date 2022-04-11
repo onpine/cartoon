@@ -10,14 +10,13 @@
   img {
     height: 120px;
     width: 90px;
-    margin-right: 15px;
     flex-grow: 0;
   }
   .content {
     flex-grow: 1;
     height: 120px;
     width: calc(100% - 135px);
-    margin: 0;
+    margin: 0 0 0 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,6 +69,7 @@
       .tags {
         width: 100%;
         // text-overflow: ;
+        cursor: pointer;
         white-space: nowrap;
         overflow: scroll;
         line-height: 20px;

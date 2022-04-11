@@ -13,18 +13,24 @@ const Card = function (props) {
     e.preventDefault();
     history.push({ pathname: `/detail/${item.cid}` });
   }
+  function handleSearch(tag) {
+    history.push({
+      pathname: "/search",
+      search: "key=" + tag,
+    });
+  }
 
   return (
-    <div className={Styles.card} onClick={handleClick}>
-      <img src={img} alt="封面" />
+    <div className={Styles.card}>
+      <img src={img} alt="封面"  onClick={handleClick}/>
       <div className={Styles.content}>
-        <h3 className={Styles.title}>{item.cname}</h3>
+        <h3 className={Styles.title}  onClick={handleClick}>{item.cname}</h3>
         <div className={Styles.detail}>
-          <div className={Styles.text}>{item.author}</div>
+          <div className={Styles.text} onClick={()=>handleSearch(item.author)}>{item.author}</div>
           <div className={Styles.tags}>
             {item.tag.map((el) => {
               return (
-                <span className={Styles.tag} key={el}>
+                <span className={Styles.tag} key={el} onClick={()=>handleSearch(el)}>
                   {el}
                 </span>
               );
