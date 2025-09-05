@@ -21,6 +21,7 @@ class BottomMenu extends React.Component {
       open: false,
       lists: [],
       title: "",
+      bottomTitle: "",
     };
 
     this.getDetailData = this.getDetailData.bind(this);
@@ -41,7 +42,7 @@ class BottomMenu extends React.Component {
       lists: [...result.data.data.chapters],
       title: result.data.data.title,
     });
-
+    this.setBottomTitleBychapter(this.props.current.chapter);
     this.props.setTitle(result.data.data.title);
   }
 
@@ -53,12 +54,21 @@ class BottomMenu extends React.Component {
 
   handlePer = () => {
     console.log("handlePer");
-    this.props.handlePageChange(this.props.current.chapter - 1);
+    const chapter = this.props.current.chapter - 1;
+    this.props.handlePageChange(chapter);
+    this.setBottomTitleBychapter(chapter);
   };
 
   handleNext = () => {
     console.log("handleNext");
+    const chapter = this.props.current.chapter + 1;
     this.props.handlePageChange(this.props.current.chapter + 1);
+    this.setBottomTitleBychapter(chapter);
+  };
+
+  setBottomTitleBychapter = (chapter) => {
+    const item = this.state.lists?.find((el) => el.cid == chapter);
+    this.state.bottomTitle = item?.ctitle;
   };
 
   backTop = () => {
@@ -71,8 +81,6 @@ class BottomMenu extends React.Component {
   };
 
   render() {
-    const sidebar = <div>hahah</div>;
-
     return (
       <div className={Styles.menu}>
         <div className={Styles.btn}>
@@ -95,7 +103,7 @@ class BottomMenu extends React.Component {
             </div>
           </button>
           <div className={Styles.text} onClick={() => this.backTop()}>
-            {this.state.lists[this.props.current.chapter - 1]?.ctitle}
+            {this.state.bottomTitle}
           </div>
         </div>
         <div
