@@ -48,7 +48,7 @@ class Detail extends React.Component {
 
   renderItem(el, index) {
     return (
-      <button className={Styles.item} onClick={() => this.handleClick(el.cid)}>
+      <button className={Styles.item} onClick={() => this.handleClick(index)}>
         {el.ctitle}
       </button>
     );

@@ -15,6 +15,7 @@ import { getDetail } from "@/servers/detail.js";
 
 class BottomMenu extends React.Component {
   constructor(props) {
+    // 注意：this.props.current.chapter指的是在lists的索引，传递路径：Detail->Read->BottomMenu->Drawer
     super(props);
 
     this.state = {
@@ -52,22 +53,27 @@ class BottomMenu extends React.Component {
     // console.log(this.state.open);
   };
 
+  onPageChange = (chapter) => {
+    this.props.handlePageChange(chapter);
+    this.setBottomTitleBychapter(chapter);
+  };
+
   handlePer = () => {
     console.log("handlePer");
     const chapter = this.props.current.chapter - 1;
-    this.props.handlePageChange(chapter);
+    this.onPageChange(chapter);
     this.setBottomTitleBychapter(chapter);
   };
 
   handleNext = () => {
     console.log("handleNext");
     const chapter = this.props.current.chapter + 1;
-    this.props.handlePageChange(this.props.current.chapter + 1);
+    this.onPageChange(this.props.current.chapter + 1);
     this.setBottomTitleBychapter(chapter);
   };
 
   setBottomTitleBychapter = (chapter) => {
-    const item = this.state.lists?.find((el) => el.cid == chapter);
+    const item = this.state.lists?.[chapter];
     this.state.bottomTitle = item?.ctitle;
   };
 
@@ -116,10 +122,10 @@ class BottomMenu extends React.Component {
                 this.setState({ open: false });
               }}
               pageChange={(index) => {
-                this.props.handlePageChange(index + 1);
+                this.onPageChange(index);
               }}
               lists={this.state.lists}
-              currentNum={this.props.current.chapter - 1}
+              currentNum={this.props.current.chapter}
             />
           ) : null}
         </div>
